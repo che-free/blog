@@ -1,0 +1,13 @@
+# Ignore docs files
+_site
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+
+# Ignore ruby/bundler files
+.bundle
+#vendor
+.ruby-version
+
+Gemfile.lock
+node_modules

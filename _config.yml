@@ -1,0 +1,43 @@
+# Jekyll Configuration
+#     - Configuration https://jekyllrb.com/docs/configuration/
+#     - Default Configuration - https://jekyllrb.com/docs/configuration/default/
+#     - Configuration Options - https://jekyllrb.com/docs/configuration/options/
+
+# Site settings
+url     : "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl : "" # the subpath of your site, e.g. "/blog"
+title   : "EnjoyDev" # the name of your site, e.g. ACME Corp.
+permalink: /:year/:title/
+
+# Handling Reading
+include:              #[".htaccess"]
+  - _pages
+exclude:              #  ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+  - run.cmd
+encoding            : "utf-8"
+
+# Defaults
+defaults:
+  # default
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  # _posts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Sass/SCSS
+sass:
+  #sass_dir: # default "_sass"
+  style: expanded # default : "compact". 개발은 "expanded", 운영은 "compressed" 설정

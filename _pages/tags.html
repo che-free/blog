@@ -1,0 +1,19 @@
+---
+permalink: /tags/
+layout: default
+---
+{%- for tags in site.tags -%}
+  {%- assign tag = tags | first -%}
+  <section id="{{ tag | slugify | downcase }}">
+    <h2>{{ tag }}</h2>
+    <ul>
+      {%- for post in site.posts -%}
+        {%- if post.tags contains tag -%}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}

@@ -40,4 +40,4 @@ compress_html:
 # Sass/SCSS
 sass:
   #sass_dir: # default "_sass"
-  style: expanded # default : "compact". 개발은 "expanded", 운영은 "compressed" 설정
+  style: expanded # default : "compact". Development "expanded", Production "compressed"

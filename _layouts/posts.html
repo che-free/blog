@@ -30,7 +30,11 @@ layout: default
   </section>
   <hr/>
   <section class="content pt-3 pb-3">
-    {% toc %}
+    {%- if page.toc -%}
+      ** TOC **
+      {% include toc.html html=content %}
+      <hr>
+    {% endif %}
     {{ content }}
   </section>
 </article>

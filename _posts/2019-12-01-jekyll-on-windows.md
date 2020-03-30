@@ -5,6 +5,7 @@ categories:
   - Jekyll
 tags:
   - Jekyll
+toc: true
 ---
 
 ## Ruby, Jekyll 설치

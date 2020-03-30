@@ -4,8 +4,6 @@
 #     - Configuration Options - https://jekyllrb.com/docs/configuration/options/
 
 # Site settings
-url     : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl : "" # the subpath of your site, e.g. "/blog"
 title   : "EnjoyDev" # the name of your site, e.g. ACME Corp.
 permalink: /:year/:title/
 
@@ -14,6 +12,8 @@ include:              #[".htaccess"]
   - _pages
 exclude:              #  ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
   - run.cmd
+  - README.md
+  - CNAME
 encoding            : "utf-8"
 
 # Defaults
@@ -28,7 +28,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "posts"
+      layout: "post"
 
 # HTML Compression
 # - https://jch.penibelst.de/

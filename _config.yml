@@ -16,6 +16,9 @@ exclude:              #  ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bun
   - run.cmd
 encoding            : "utf-8"
 
+plugins:
+  - jekyll-toc
+
 # Defaults
 defaults:
   # default

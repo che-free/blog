@@ -1,9 +1,11 @@
 /*
     https://github.com/jwarby/jekyll-pygments-themes
 */
-/*
-.highlight pre { background-color: #222222 }
-*/
+
+.highlight pre { background-color: #222; }
+.highlight code { color: #eff; }
+
+/////////////////////////
 
 .highlight .hll { background-color: #222222 }
 .highlight .c { color: #000080 } /* Comment */

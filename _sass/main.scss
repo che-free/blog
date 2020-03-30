@@ -10,7 +10,9 @@ $border-color: rgb(222, 226, 230);
 @import "tables";
 
 @import "highlight";
-@import "highlight_vim";
+//@import "highlight_vim";
+//@import "highlight_github";
+@import "_highlight_monokai";
 @import "gist";
 
 @import "blog";

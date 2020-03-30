@@ -6,7 +6,7 @@ layout: default
   {%- assign post_list_item_css = "mt-1 mb-1 px-2" -%}
   {%- assign post_list_item_css_hover = "mt-0 mb-2 px-2" -%}
   {% for page in site.posts limit:10 %}
-    {% include post_list_item.html %}
+    {% include post-list-item.html %}
   {% endfor %}
   <script>
       $(".post-list-item").hover(function() {

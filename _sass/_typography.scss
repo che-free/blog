@@ -1,51 +1,37 @@
 /* == Typography == */
-body {
-    background: $backgroundColor;
-    color: $bodyColor;
-    font-family: $bodyFont;
-    line-height: 2rem;
-}
-
-code,
-pre code {
-    font-size: 1rem;
-    font-family: "D2Coding", Monaco, Consolas, "Lucida Console", monospace;
-}
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 1rem;
-  //margin-top: 3rem;
-  font-weight: 700;
-  line-height: 1.2rem;
+    margin-top: 3rem; // !important;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 0.75;
 }
 
 h1, .h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 2.0rem;
 }
 
 h2, .h2 {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.75rem;
 }
 
 h3, .h3 {
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+    font-size: 1.5rem;
 }
 
 h4, .h4 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
 }
 
 h5, .h5 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1.125rem;
 }
 
 h6, .h6 {
     font-size: 1rem;
-    line-height: 1rem;
+}
+
+code,
+pre code {
+    font-family: $codeFont;
 }

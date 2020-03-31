@@ -1,14 +1,14 @@
 /* == Syntax highlight == */
-div.highlighter-rouge,
-figure.highlight {
+.highlighter-rouge,
+.highlight {
     position: relative;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     background: #263238;
     border-radius: 4px;
-    font-family: "D2Coding", Monaco, Consolas, "Lucida Console", monospace;
+    font-family: $codeFont;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 /*div.highlighter-rouge>pre,
@@ -19,4 +19,11 @@ div.highlighter-rouge pre.highlight,
 figure.highlight>pre {
     margin: 0;
     padding: 1em;
+}
+
+/* == gist == */
+.gist {
+  th, td {
+    border-bottom: 0;
+  }
 }

@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    font-size: 1rem;
     margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
@@ -24,10 +23,13 @@ body {
 }
 
 .nav-link {
-    font-size: 1rem;
 }
 
 .site-header {
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
 }
 
 .site-main {
@@ -59,19 +61,19 @@ body {
 .post-list {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     .post-list-item {
         display: inline-block;
-        widthXX: 100%;
 
         .title {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
         }
         .excerpt {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
         }
         .metadata {
-            font-size: 1rem;
         }
     }
 }
@@ -92,11 +94,11 @@ body {
 }
 
 .content {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6 {
-      margin-top: 3rem; // !important;
+      //margin-top: 3rem; // !important;
     }
 
     h1, h2, h3 {
@@ -107,27 +109,27 @@ body {
             display: inline-block;
         }
     }
+}
 
-    blockquote {
-        padding-left: 20px;
-        border-left: solid 5px #6f777d;
-        font-style: italic;
-        color: #494e52;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        line-height: 1.75rem;
-        border-radius: 4px;
-    }
+blockquote {
+    padding-left: 20px;
+    border-left: solid 5px #6f777d;
+    font-style: italic;
+    color: #494e52;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    border-radius: 4px;
+}
 
-    blockquote.info {
-        padding: 1rem;
-        border: 0px;
-        background-color: #ebf5f8;
-        font-style: normal;
-    }
+blockquote.info {
+    padding: 1rem;
+    border: 0px;
+    background-color: #ebf5f8;
+    font-style: normal;
+}
 
-    blockquote>p {
-        margin: 0;
-    }
+blockquote>p {
+    margin: 0;
 }

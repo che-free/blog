@@ -1,11 +1,10 @@
 ---
-permalink: /posts/
 layout: default
 ---
 <section class="post-list">
   {%- assign post_list_item_css = "mt-1 mb-1 px-2" -%}
   {%- assign post_list_item_css_hover = "mt-0 mb-2 px-2" -%}
-  {% for page in site.posts %}
+  {% for page in site.posts limit:10 %}
     {% include post-list-item.html %}
   {% endfor %}
   <script>
@@ -19,4 +18,7 @@ layout: default
           $(this).addClass("{{ post_list_item_css }}");
       });
   </script>
+  <section class="pt-3 pb-3">
+    <a class="text-dark text-decoration-none" href="{{ "/posts/" | relative_url }}"><i class="far fa-file-alt"></i> 더보기...</a>
+  </section>
 </section>

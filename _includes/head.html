@@ -1,0 +1,20 @@
+{%- assign html_title = "" -%}
+
+{%- if page.title -%}
+  {%- assign html_title = page.title | append: " - " | append: site.title -%}
+{%- endif -%}
+
+{%- if html_title -%}
+  {%- assign html_title = html_title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- endif -%}
+
+  <title>{{ html_title | default: site.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ "/assets/vendor/bootstrap/4.4.1/css/bootstrap.css" | relative_url }}">
+  <script src="{{ "/assets/vendor/jquery/jquery-3.4.1.slim.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/vendor/popper/1.16.0/popper.js" | relative_url }}"></script>
+  <script src="{{ "/assets/vendor/bootstrap/4.4.1/js/bootstrap.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/vendor/fontawesome/free-5.12.0-web/css/all.css" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicon-16x16.png" | relative_url }}">

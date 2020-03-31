@@ -27,10 +27,6 @@ body {
     padding-left: 15px !important;
     padding-right: 0 !important;
 
-    .title {
-        font-size: 2rem;
-        font-weight: bold;
-    }
     .nav-link {
         span {
             padding-left: 0.5rem;
@@ -88,8 +84,8 @@ body {
         display: inline-block;
 
         .title {
-            font-size: 1.75rem;
-            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 0;
         }
         .excerpt {
             font-size: 1.125rem;
@@ -109,9 +105,10 @@ body {
 
 .post {
     .title {
-        font-size: 2.125rem;
-        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0;
     }
+
     .metadata {
         font-size: 1rem;
     }
@@ -119,8 +116,8 @@ body {
 
 .page {
     .title {
-        font-size: 2.125rem;
-        line-height: 1.2;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -139,5 +136,29 @@ body {
             width: 100%;
             display: inline-block;
         }
+    }
+}
+
+
+@media (max-width:768px) {
+    h1, .h1 {
+        font-size: 1.75rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.25rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .highlighter-rouge,
+    .highlight {
+        font-size: 0.75rem;
     }
 }

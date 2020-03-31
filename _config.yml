@@ -8,12 +8,13 @@ title   : "EnjoyDev" # the name of your site, e.g. ACME Corp.
 permalink: /:year/:title/
 
 # Handling Reading
-#include:              #[".htaccess"]
-#  - _pages
+include:              #[".htaccess"]
+  - _pages
 exclude:              #  ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
   - run.cmd
   - README.md
   - CNAME
+#  - jekyll/page-variables.html
 encoding            : "utf-8"
 
 # Defaults

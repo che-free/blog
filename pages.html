@@ -9,7 +9,7 @@ title: Pages
 {%- assign exclude_list = "/assets/css/,/assets/css/" | split: "," -%}
 
 {%- assign array_string = "" -%}
-{%- for page in site.pages -%}
+{%- for page in site.html_pages -%}
     {%- assign path_only = "/" | append : page.path | remove : page.name -%}
     {%- if exclude_list contains path_only -%}
     {%- else -%}
@@ -21,13 +21,13 @@ title: Pages
 {%- endfor -%}
 {%- assign page_path_array = array_string | split: '|' | uniq | sort -%}
 
-<h2>site.pages</h2>
+<h2>site.html_pages</h2>
 <ul>
 {%- for path in page_path_array -%}
     {%- if path contains "/" -%}
         <li>{{ path }}</li>
         <ul>
-            {%- for page in site.pages -%}
+            {%- for page in site.html_pages -%}
                 {%- assign page_path1 = path | append : page.name -%}
                 {%- assign page_path2 = "/" | append : page.path -%}
                 {%- if page_path1 == page_path2 -%}

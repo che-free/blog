@@ -1,0 +1,142 @@
+---
+title:  "Jekyll Page variables"
+---
+
+<h2>Jekyll Page variables</h2>
+<p>
+Page Variables 참고 https://jekyllrb.com/docs/variables/
+</p>
+
+<p>
+- page.content : site.pages, site.posts 본문 내용<br>
+- page.excerpt : site.posts 발췌 내용<br>
+</p>
+
+<h3>site.pages</h3>
+<p>site.pages : title, url, dir, name, path</p>
+<table>
+  <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
+  <tbody>
+{%- for page in site.pages -%}
+    {%- assign row = "<tr>" -%}
+    {%- assign row = row | append : "<td>" | append : page.title        | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.url          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.date         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.id           | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.categories   | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.tags         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.dir          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.name         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.path         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.next.url     | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.previous.url | append : "</td>" -%}
+    {%- assign row = row | append : "</tr>" -%}
+    {{ row }}
+{%- endfor -%}
+  </tbody>
+</table>
+
+<h3>site.posts</h3>
+<p>site.posts : title, url, date, id, categories, tags, path, next, previous</p>
+<table>
+  <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
+  <tbody>
+{%- for page in site.posts -%}
+    {%- assign row = "<tr>" -%}
+    {%- assign row = row | append : "<td>" | append : page.title        | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.url          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.date         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.id           | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.categories   | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.tags         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.dir          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.name         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.path         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.next.url     | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.previous.url | append : "</td>" -%}
+    {%- assign row = row | append : "</tr>" -%}
+    {{ row }}
+    {{ "" }}
+{%- endfor -%}
+  </tbody>
+</table>
+
+<h3>site.static_files</h3>
+<p>site.static_files : name, path</p>
+<table>
+  <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
+  <tbody>
+{%- for page in site.static_files limit:10 -%}
+    {%- assign row = "<tr>" -%}
+    {%- assign row = row | append : "<td>" | append : page.title        | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.url          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.date         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.id           | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.categories   | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.tags         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.dir          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.name         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.path         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.next.url     | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.previous.url | append : "</td>" -%}
+    {%- assign row = row | append : "</tr>" -%}
+    {{ row }}
+    {{ "" }}
+{%- endfor -%}
+  </tbody>
+</table>
+
+<h3>site.html_pages</h3>
+<p>site.pages : title, url, dir, name, path</p>
+<table>
+  <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
+  <tbody>
+{%- for page in site.html_pages limit:30 -%}
+    {%- assign row = "<tr>" -%}
+    {%- assign row = row | append : "<td>" | append : page.title        | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.url          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.date         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.id           | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.categories   | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.tags         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.dir          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.name         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.path         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.next.url     | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.previous.url | append : "</td>" -%}
+    {%- assign row = row | append : "</tr>" -%}
+    {{ row }}
+    {{ "" }}
+{%- endfor -%}
+  </tbody>
+</table>
+
+<h3>site.html_files</h3>
+<table>
+  <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
+  <tbody>
+{%- for page in site.html_files limit:30 -%}
+    {%- assign row = "<tr>" -%}
+    {%- assign row = row | append : "<td>" | append : page.title        | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.url          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.date         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.id           | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.categories   | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.tags         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.dir          | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.name         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.path         | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.next.url     | append : "</td>" -%}
+    {%- assign row = row | append : "<td>" | append : page.previous.url | append : "</td>" -%}
+    {%- assign row = row | append : "</tr>" -%}
+    {{ row }}
+    {{ "" }}
+{%- endfor -%}
+  </tbody>
+</table>
+
+
+
+
+
+

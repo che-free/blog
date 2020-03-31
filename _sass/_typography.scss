@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6,
     margin-top: 3rem; // !important;
     margin-bottom: 1rem;
     font-weight: 700;
-    line-height: 0.75;
+    line-height: 1.2;
 }
 
 h1, .h1 {
@@ -34,4 +34,27 @@ h6, .h6 {
 code,
 pre code {
     font-family: $codeFont;
+}
+
+blockquote {
+    padding-left: 20px;
+    border-left: solid 5px #6f777d;
+    font-style: italic;
+    color: #494e52;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    border-radius: 4px;
+}
+
+blockquote.info {
+    padding: 1rem;
+    border: 0px;
+    background-color: #ebf5f8;
+    font-style: normal;
+}
+
+blockquote>p {
+    margin: 0;
 }

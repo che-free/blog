@@ -2,4 +2,43 @@
 title: Pages
 ---
 
-pages...
+{%- comment -%}
+  페이지들의 경로 리스트를 배열로 저장
+{%- endcomment -%}
+
+{%- assign exclude_list = "/assets/css/,/assets/css/" | split: "," -%}
+
+{%- assign array_string = "" -%}
+{%- for page in site.pages -%}
+    {%- assign path_only = "/" | append : page.path | remove : page.name -%}
+    {%- if exclude_list contains path_only -%}
+    {%- else -%}
+      {%- if array_string != "" -%}
+        {%- assign array_string = array_string | append : "|" -%}
+      {%- endif -%}
+      {%- assign array_string = array_string | append : path_only -%}
+    {%- endif -%}
+{%- endfor -%}
+{%- assign page_path_array = array_string | split: '|' | uniq | sort -%}
+
+<h2>site.pages</h2>
+<ul>
+{%- for path in page_path_array -%}
+    {%- if path contains "/" -%}
+        <li>{{ path }}</li>
+        <ul>
+            {%- for page in site.pages -%}
+                {%- assign page_path1 = path | append : page.name -%}
+                {%- assign page_path2 = "/" | append : page.path -%}
+                {%- if page_path1 == page_path2 -%}
+                    {%- if page.title -%}
+                        <li><a href="{{ page.url }}">{{ page.title }} ({{ page.name }})</a></li>
+                    {%- else -%}
+                        <li><a href="{{ page.url }}">{{ page.name }}</a></li>
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -16,5 +16,23 @@ blah-blah-blah
 {% raw %}{% include header.html %}{% endraw %}
 ```
 
-## Refreences
-- [Liquid](https://shopify.github.io/liquid/)
+### 디렉토리 구조
+```
+\jekyll-site
+├─ _data
+├─ _drafts
+├─ _includes
+├─ _layouts
+├─ _posts
+├─ _sass
+└─ assets
+    ├─ css
+    ├─ img
+    ├─ js
+    ├─ posts
+    └─ vendor
+```
+
+## 참고
+- [Jekyll](https://jekyllrb.com/){:target="_blank"}
+- [Liquid](https://shopify.github.io/liquid/){:target="_blank"}

@@ -14,7 +14,7 @@ title: "Browser information"
 | body font-size | <span id="body-font-size">-</span> |
 | Browser Language | <span id="browser-language">-</span> |
 | User-agent | <span id="user-agent">-</span> |
-| IP address | <span id="ip-address">loading...</span> |
+| IP address | <span id="ip-address">loading...</span> [<i class="fas fa-external-link-alt"></i>](http://www.ipconfig.co.kr/){:target="_blank"} |
 
 <script>
     (function() {

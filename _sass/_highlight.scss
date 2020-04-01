@@ -1,6 +1,5 @@
 /* == Syntax highlight == */
-.highlighter-rouge,
-.highlight {
+.highlighter-rouge, .highlight {
     position: relative;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
@@ -26,4 +25,18 @@ figure.highlight>pre {
   th, td {
     border-bottom: 0;
   }
+}
+
+@media (max-width:$breakpoint-md) {
+    .highlighter-rouge,
+    .highlight {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    div.highlighter-rouge pre.highlight,
+    figure.highlight>pre {
+        margin: 0;
+        padding: 0.5em;
+    }
 }

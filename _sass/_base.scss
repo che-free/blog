@@ -1,4 +1,4 @@
-/* == Global == */
+/* == Base == */
 html {
 }
 
@@ -6,6 +6,4 @@ body {
     background: $backgroundColor;
     color: $bodyColor;
     font-family: $bodyFont;
-    font-size: 1rem;
-    line-height: 2rem;
 }

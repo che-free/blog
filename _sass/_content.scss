@@ -13,18 +13,9 @@ body {
     }
 }
 
-@media (min-width:768px) {
-}
-
-@media (min-width:992px) {
-}
-
-@media (min-width:1200px) {
-}
-
 .site-header {
     min-width: 360px;
-    padding-left: 15px !important;
+    padding-left: 1rem !important;
     padding-right: 0 !important;
 
     .nav-link {
@@ -139,26 +130,29 @@ body {
     }
 }
 
-
-@media (max-width:768px) {
-    h1, .h1 {
-        font-size: 1.75rem;
+@media (max-width:$breakpoint-md) {
+    .site-header {
+        padding-left: 0.5rem !important;
     }
 
-    h2, .h2 {
-        font-size: 1.5rem;
+    .site-main {
+        &:before {
+            padding-top: 2rem;
+        }
+        &:after {
+            padding-bottom: 2rem;
+        }
     }
 
-    h3, .h3 {
-        font-size: 1.25rem;
+    .post-list {
+        .post-list-item {
+            .excerpt {
+                font-size: 1rem;
+            }
+        }
     }
 
     .content {
         font-size: 1rem;
-    }
-
-    .highlighter-rouge,
-    .highlight {
-        font-size: 0.75rem;
     }
 }

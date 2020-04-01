@@ -88,6 +88,15 @@ Page Variables 참고 https://jekyllrb.com/docs/variables/
 
 <h3>site.html_pages</h3>
 <p>site.pages : title, url, dir, name, path</p>
+
+소스 파일("/test/files.md")에서 permalink를 "/files.html"로 지정한 경우 다음처럼 표시된다.
+<ul>
+  <li>url : /files.html</li>
+  <li>dir : /</li>
+  <li>name : files.md</li>
+  <li>path : test/files.md</li>
+</ul>
+
 <table>
   <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
   <tbody>
@@ -112,6 +121,7 @@ Page Variables 참고 https://jekyllrb.com/docs/variables/
 </table>
 
 <h3>site.html_files</h3>
+<p>Jekyll 문서에서는 <b>"A subset of 'site.static_files' listing those which end in '.html'."</b> 이렇게 설명하고 있지만, 아무런 파일도 표시되지 않고 있다.</p>
 <table>
   <thead><tr><th>title</th><th>url</th><th>date</th><th>id</th><th>categories</th><th>tags</th><th>dir</th><th>name</th><th>path</th><th>next</th><th>previous</th></tr></thead>
   <tbody>
@@ -134,9 +144,3 @@ Page Variables 참고 https://jekyllrb.com/docs/variables/
 {%- endfor -%}
   </tbody>
 </table>
-
-
-
-
-
-

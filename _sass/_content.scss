@@ -17,8 +17,8 @@ body {
 
 @media (max-width: $breakpoint-sm) {
     .content-container {
-        padding-left: 0.25rem !important;
-        padding-right: 0.25rem !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
     }
 }
 
@@ -49,6 +49,8 @@ body {
 
 .site-header {
     min-width: 360px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     .navbar {
         padding-right: 0;

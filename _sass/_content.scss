@@ -141,6 +141,12 @@ body {
             display: inline-block;
         }
     }
+
+    img.center {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: $breakpoint-sm) {

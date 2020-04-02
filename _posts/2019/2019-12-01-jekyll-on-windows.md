@@ -55,21 +55,21 @@ gpg: /etc/pacman.d/gnupg/trustdb.gpg: trustdb created
 -->
 
 ## RubyInstaller 설치 화면
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-01.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-01.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-02.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-02.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-03.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-03.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-04.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-04.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-05.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-05.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-06.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-06.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-07.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-07.png" | absolute_url }}){: .center}
 
-![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-08.png" | absolute_url }})
+![Ruby installer]({{ "/assets/posts/jekyll-on-window/ruby-install-08.png" | absolute_url }}){: .center}
 
 ### 관련 사이트
 - [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)

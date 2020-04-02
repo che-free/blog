@@ -63,6 +63,9 @@ blockquote>p {
     margin: 0;
 }
 
+ul {
+    padding-inline-start: 2rem;
+}
 
 @media (max-width:$breakpoint-md) {
     body {
@@ -94,5 +97,9 @@ blockquote>p {
         margin-bottom: 0.5rem;
         font-size: 0.875rem;
         line-height: 1.25rem;
+    }
+
+    ul {
+        padding-inline-start: 1.5rem;
     }
 }

@@ -7,29 +7,58 @@ body {
     margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
-@media (max-width:576px) {
-    .site-header, .site-main, .site-footer {
-        // width: 540px;
+.content-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+@media (max-width: $breakpoint-sm) {
+    .content-container {
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .content-container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .content-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .content-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .content-container {
+        max-width: 1140px;
     }
 }
 
 .site-header {
     min-width: 360px;
-    padding-left: 1rem !important;
-    padding-right: 0 !important;
 
-    .nav-link {
-        span {
-            padding-left: 0.5rem;
-        }
-    }
-}
+    .navbar {
+        padding-right: 0;
 
-@media (max-width:480px) {
-    .site-header {
         .nav-link {
+            padding-left: 1rem;
+            padding-right: 0;
+
             span {
-                display: none;
+                padding-left: 0.5rem;
             }
         }
     }
@@ -59,12 +88,6 @@ body {
     height: 60px; /* Set the fixed height of the footer here */
 }
 
-@media (min-width:992px) {
-    .post-list {
-        //width: 960px;
-    }
-}
-
 .post-list {
     margin-left: auto;
     margin-right: auto;
@@ -84,13 +107,6 @@ body {
         }
         .metadata {
         }
-    }
-}
-
-@media (max-width:576px) {
-    .post-list {
-        padding-left: 0;
-        padding-right: 0;
     }
 }
 
@@ -115,11 +131,6 @@ body {
 .content {
     font-size: 1.125rem;
 
-    h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6 {
-      //margin-top: 3rem; // !important;
-    }
-
     h1, h2, h3 {
         &:after {
             content: "";
@@ -130,9 +141,18 @@ body {
     }
 }
 
+@media (max-width: $breakpoint-sm) {
+    .site-header {
+        .nav-link {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width:$breakpoint-md) {
     .site-header {
-        padding-left: 0.5rem !important;
     }
 
     .site-main {
@@ -145,6 +165,9 @@ body {
     }
 
     .post-list {
+        padding-left: 0;
+        padding-right: 0;
+
         .post-list-item {
             .excerpt {
                 font-size: 1rem;

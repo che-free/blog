@@ -1,11 +1,7 @@
 {%- assign html_title = "" -%}
 
 {%- if page.title -%}
-  {%- assign html_title = page.title | append: " - " | append: site.title -%}
-{%- endif -%}
-
-{%- if html_title -%}
-  {%- assign html_title = html_title | markdownify | strip_html | strip_newlines | escape_once -%}
+  {%- assign html_title = page.title | markdownify | strip_html | strip_newlines | escape_once | strip | append: " | " | append: site.title -%}
 {%- endif -%}
 
   <title>{{ html_title | default: site.title }}</title>

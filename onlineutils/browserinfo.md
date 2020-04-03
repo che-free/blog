@@ -2,8 +2,6 @@
 title: "Browser information"
 ---
 
-## Browser information
-
 | Attribute | Values |
 |--|--|
 | Screen size | <span id="screen-size">-</span> |

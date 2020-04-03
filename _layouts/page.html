@@ -2,7 +2,16 @@
 layout: default
 ---
 <article class="page">
-  <section class="content">
+  <header class="title h1 text-center font-weight-bold pt-1 pb-1">
+    {{ page.title }}
+  </header>
+  <hr/>
+  <section class="content pt-3 pb-3">
+    {%- if page.toc -%}
+      ** TOC **
+      {% include toc.html html=content %}
+      <hr>
+    {% endif %}
     {{ content }}
   </section>
 </article>

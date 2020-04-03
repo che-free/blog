@@ -2,8 +2,6 @@
 title: Jekyll snippets
 ---
 
-## Jekyll snippets
-
 ### comment
 ```
 {% raw %}{% comment %}

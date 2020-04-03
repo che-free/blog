@@ -1,8 +1,6 @@
 ---
-title: Jekyll markdown snippets
+title: "Markdown cheatsheet"
 ---
-
-## Jekyll markdown snippets
 
 ### 링크
 ```md

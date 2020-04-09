@@ -5,6 +5,7 @@ tags: Ubuntu
 
 우분투(18.04 LTS) 서버에 SSH 로그인하면 텔레그램으로 메시지를 전송한다.
 
+
 1. /etc/pam.d/sshd 파일에 아래 내용을 추가한다.
     ```
     session optional pam_exec.so seteuid /etc/ssh/login-notify.sh

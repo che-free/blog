@@ -5,60 +5,89 @@ title: "jQuery - ajax"
 jQuery에서 ajax 사용 정리.
 
 
-## done, fail, always 콜백을 이용하는 방법
-```
-$.ajax("https://httpbin.org/get")
+## 가장 간단한 ajax
+```js
+$.ajax("https://httpbin.org/get?p1=v1&p2=v2")
     .done(function(data, textStatus, jqXHR) {
-        console.log("done", data);
+        console.log("ajax done", data);
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
-        console.log("fail", jqXHR);
-    })
-    .always(function() {
-        console.log("always");
+        console.log("ajax fail", jqXHR);
     });
 ```
 
-## success, error, complete 콜백을 이용하는 방법
-> Deprecation Notice: The jqXHR.success(), jqXHR.error(), and jqXHR.complete() callbacks are removed as of jQuery 3.0. You can use jqXHR.done(), jqXHR.fail(), and jqXHR.always() instead.
 
-```
-$.ajax({
-    url     : "https://httpbin.org/get",
-    success : function(data, textStatus, jqXHR) {
-        console.log("success", data);
-    },
-    error : function(jqXHR, textStatus, errorThrown) {
-        console.log("error", jqXHR);
-    },
-    complete : function(jqXHR, textStatus) {
-        console.log("complete", jqXHR);
-    }
-});
+## done, fail, always Promise callbacks
+```js
+$.ajax("https://httpbin.org/get?p1=v1&p2=v2")
+    .done(function(data, textStatus, jqXHR) {
+        console.log("ajax done", data);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log("ajax fail", jqXHR);
+    })
+    .always(function() {
+        console.log("ajax always");
+    });
 ```
 
-<script>
-</script>
 
 ## POST, JSON 데이터 전송
-```
+```js
 $.ajax({
-    url     : "https://httpbin.org/post",
-    type    : "POST",
+        url: "https://httpbin.org/post",
+        method: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({"p1":"v1", "p2":"v2"}),
+        dataType: "json"
+    })
+    .done(function(data, textStatus, jqXHR) {
+        console.log("ajax done", data);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log("ajax fail", jqXHR);
+    })
+    .always(function() {
+        console.log("ajax always");
+    });
+```
+
+
+## success, error, complete callbacks
+> Deprecation Notice: The jqXHR.success(), jqXHR.error(), and jqXHR.complete() callbacks are removed as of jQuery 3.0. You can use jqXHR.done(), jqXHR.fail(), and jqXHR.always() instead.
+
+```js
+$.ajax({
+    url: "https://httpbin.org/get?p1=v1&p2=v2",
+    success: function(data, textStatus, jqXHR) {
+        console.log("ajax success", data);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log("ajax error", jqXHR);
+    },
+    complete: function() {
+        console.log("ajax complete");
+    }
+});
+
+$.ajax({
+    url: "https://httpbin.org/post",
+    type: "POST",
     contentType: "application/json",
-    data    : JSON.stringify({"p1":"v1", "p2":"v2"}),
+    data: JSON.stringify({"p1":"v1", "p2":"v2"}),
     dataType: "json",
-    success : function(data, textStatus, jqXHR) {
-        console.log("success", data);
+    success: function(data, textStatus, jqXHR) {
+        console.log("ajax success", data);
     },
-    error : function(jqXHR, textStatus, errorThrown) {
-        console.log("error", jqXHR);
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log("ajax error", jqXHR);
     },
-    complete : function(jqXHR, textStatus) {
-        console.log("complete", jqXHR);
+    complete: function() {
+        console.log("ajax complete");
     }
 });
 ```
+
 
 <script>
 </script>

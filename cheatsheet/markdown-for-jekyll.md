@@ -12,13 +12,14 @@ Jekyll 글 작성에서 Markdown 문법 정리.
 See the section on [`code`](#code)
 [Google](https://google.com/ "google link")
 [Google](https://google.com/ "google link"){: target="_blank"}{% endraw %}
+<https://google.com/>{: target="_blank"}
 ```
 - [Posts]({{ "/posts/" | relative_url }} "Posts")
 - [Posts]({{ "/posts/" | absolute_url }} "Posts")
 - See the section on [code](#code)
 - [Google](https://google.com/ "google link")
 - [Google](https://google.com/ "google link"){: target="_blank"}
-
+- <https://google.com/>{: target="_blank"}
 
 
 ### 이미지

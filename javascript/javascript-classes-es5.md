@@ -2,105 +2,100 @@
 title: "클래스 선언 방법 (ES5)"
 ---
 
-클래스 선언 방법 (ES5).
+Class/Object 선언 방법.
 
-### 리터럴 방식
+
+### 리터럴 방식 Object 생성
 ```js
-var 인스턴스 = {
-  프로퍼티1 : 초기값,
-  프로퍼티2 : 초기값,
-  메서드1 : function() {
-
-  },
-  메서드2 : function() {
-
-  }
-}
-```
-
-### 함수 방식
-```js
-function Person() {
-    this.name = '';
-    this.age = 초기값;
-
-    this.메서드1 = function() {
-
-    }
-
-    this.메서드2 = function() {
-
+var Person = {
+    firstName : "Micheal",
+    lastName : "Jackson",
+    getFullName : function() {
+        return this.firstName + ' ' + this.lastName;
     }
 }
 
-var 인스턴스 = new 클래스이름(); 
+Person.getFullName();
 ```
 
 
-### 프로토타입(prototype) 방식
+### 함수 방식 클래스 선언
 ```js
-function 클래스이름() {
-  this.프로퍼티1 = 초기값;
-  this.프로퍼티2 = 초기값;
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.getFullName = function() {
+        return this.firstName + ' ' + this.lastName;
+    }
 }
 
-클래스이름.prototype.메서드1 = function() {
-
-}
-
-클래스이름.prototype.메서드2 = function() {
-
-}
+var p1 = new Person("Micheal", "Jackson");
+p1.getFullName();
 ```
 
 
-### 생성자, 프로토타입
+### 함수 + 프로토타입(prototype) 방식 (※ 일반적인 클래스 선언 방법)
+```js
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+}
+
+var p1 = new Person("Micheal", "Jackson");
+p1.getFullName();
+```
+
+
+### 즉시실행함수(IIFE) + 함수 + 프로토타입(prototype) 방식
 ```js
 var Person = (function () {
-  // Constructor
-  function Person(name) {
-    this._name = name;
-  }
- 
-  // method
-  Person.prototype.sayHi = function () {
-    console.log('Hi! ' + this._name);
-  };
- 
-  // return constructor
-  return Person;
+    function PersonA(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    PersonA.prototype.getFullName = function () {
+        return this.firstName + ' ' + this.lastName;
+    };
+
+    return PersonA;
 }());
  
-var me = new Person('Lee');
-me.sayHi(); // Hi! Lee.
- 
-console.log(me instanceof Person); // true
+var p1 = new Person("Micheal", "Jackson");
+p1.getFullName();
 ```
 
 
-### 리터럴 방식
+### 즉시실행함수(IIFE) + 내부 속성/함수 숨기기
 ```js
-var Client = (function() {
-  "use strict";
+var Person = (function() {
+    "use strict";
 
-  var $this = {};
+    var $this = {};
 
-  $this.init = function(name, settings) {
-    $this.name = name;
-    $this.settings = settings || {};
-    console.log("init()-" + $this.name, $this.settings);
-  }
+    $this.init = function(firstName, lastName) {
+        $this.firstName = firstName;
+        $this.lastName = lastName;
+    }
 
-  $this.clear = function() {
-    console.log("clear()");
-  }
+    $this.getFullName = function () {
+        return $this.firstName + ' ' + $this.lastName;
+    };
 
-  return {
-    init: $this.init,
-    clear: $this.clear
-  }
+    $this.privateFunction = function() {
+        // ...
+    }
+
+    return {
+        init: $this.init,
+        getFullName: $this.getFullName
+    }
 })();
 
-Client.init("client", {'key1':'val1', 'key2':'val2'});
-Client.clear();
+Person.init("Micheal", "Jackson");
+Person.getFullName();
 ```
